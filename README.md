@@ -1,150 +1,143 @@
-Tentu, ini draf dokumentasi `README.md` yang lengkap dan ramah untuk developer pemula, sesuai dengan permintaan Anda.
+# Jericobots - Website & Catalog 🤖
+
+Welcome to the Jericobots repository\! This is a website project built with Next.js and Tailwind CSS, serving as a product catalog and homepage for a fictional tech company, Jericobots, which focuses on AI and Robotics.
+
+This documentation is designed to help developers, especially beginners, understand how the application works, its code structure, and how to run it locally.
+
+## 📋 Table of Contents
+
+  - [✨ Application Overview](https://www.google.com/search?q=%23-application-overview)
+  - [🛠️ Prerequisites & Installation](https://www.google.com/search?q=%23%EF%B8%8F-prerequisites--installation)
+  - [🚀 How to Use](https://www.google.com/search?q=%23-how-to-use)
+  - [📂 Code Structure](https://www.google.com/search?q=%23-code-structure)
+  - [🤔 Common Troubleshooting](https://www.google.com/search?q=%23-common-troubleshooting)
+  - [🗺️ Development Roadmap](https://www.google.com/search?q=%23%EF%B8%8F-development-roadmap)
 
 -----
 
-# Jericobots - Katalog & Situs Perusahaan 🤖
+## ✨ Application Overview
 
-Selamat datang di repositori Jericobots\! Ini adalah proyek situs web yang dibangun menggunakan Next.js dan Tailwind CSS, berfungsi sebagai katalog produk dan halaman utama untuk perusahaan teknologi fiktif, Jericobots, yang berfokus pada AI dan Robotika.
+**Jericobots** is an interactive website showcasing a technology company's profile. Its goals are to:
 
-Dokumentasi ini dibuat untuk membantu developer, terutama pemula, memahami cara kerja, struktur kode, dan cara menjalankan aplikasi ini secara lokal.
+1.  **Showcase Products**: Display a catalog of featured products in AI, Robotics, and Automation.
+2.  **Build Brand Image**: Enhance the company's image as a pioneer in industrial technology.
+3.  **Attract Clients & Talent**: Through case studies, a blog, and a careers page.
 
-## 📋 Daftar Isi
-
-  - [✨ Overview Aplikasi](https://www.google.com/search?q=%23-overview-aplikasi)
-  - [🛠️ Prasyarat & Instalasi](https://www.google.com/search?q=%23%EF%B8%8F-prasyarat--instalasi)
-  - [🚀 Cara Penggunaan](https://www.google.com/search?q=%23-cara-penggunaan)
-  - [📂 Struktur Kode](https://www.google.com/search?q=%23-struktur-kode)
-  - [🤔 Troubleshooting Umum](https://www.google.com/search?q=%23-troubleshooting-umum)
-  - [🗺️ Roadmap Pengembangan](https://www.google.com/search?q=%23%EF%B8%8F-roadmap-pengembangan)
+The application is fully responsive and designed with a modern aesthetic suitable for the B2B tech industry.
 
 -----
 
-## ✨ Overview Aplikasi
+## 🛠️ Prerequisites & Installation
 
-**Jericobots** adalah sebuah situs web interaktif yang menampilkan profil perusahaan teknologi. Tujuannya adalah untuk:
+Before you begin, make sure you have the following software installed on your computer:
 
-1.  **Memamerkan Produk**: Menampilkan katalog produk unggulan di bidang AI, Robotika, dan Otomatisasi.
-2.  **Membangun Citra**: Meningkatkan citra perusahaan sebagai pelopor teknologi industri.
-3.  **Menarik Klien & Talenta**: Melalui studi kasus, blog, dan halaman karir.
-
-Aplikasi ini sepenuhnya responsif dan dirancang dengan estetika modern yang cocok untuk industri teknologi B2B.
-
------
-
-## 🛠️ Prasyarat & Instalasi
-
-Sebelum memulai, pastikan Anda sudah menginstal perangkat lunak berikut di komputer Anda:
-
-  * [Node.js](https://nodejs.org/) (v18.0 atau lebih baru)
-  * [Bun](https://bun.sh/) (Digunakan sebagai package manager & runtime)
+  * [Node.js](https://nodejs.org/) (v18.0 or later)
+  * [Bun](https://bun.sh/) (Used as the package manager & runtime)
   * [Git](https://git-scm.com/)
 
-### Langkah-langkah Instalasi
+### Installation Steps
 
-1.  **Clone Repositori**
-    Buka terminal Anda dan jalankan perintah berikut:
+1.  **Clone the Repository**
+    Open your terminal and run the following command:
 
     ```bash
-    git clone https://<URL_REPOSITORI_ANDA>.git
+    git clone https://<YOUR_REPOSITORY_URL>.git
     cd jericobots
     ```
 
-2.  **Instal Dependensi**
-    Proyek ini menggunakan `bun` sebagai *package manager*. Jalankan perintah:
+2.  **Install Dependencies**
+    This project uses `bun` as its package manager. Run the command:
 
     ```bash
     bun install
     ```
 
-    Perintah ini akan membaca `package.json` dan menginstal semua paket yang dibutuhkan.
+    This command will read the `package.json` file and install all the necessary packages.
 
 -----
 
-## 🚀 Cara Penggunaan
+## 🚀 How to Use
 
-Setelah instalasi selesai, Anda bisa menjalankan server pengembangan lokal.
+Once the installation is complete, you can run the local development server.
 
-1.  **Jalankan Server Development**
+1.  **Run the Development Server**
 
     ```bash
     bun run dev
     ```
 
-2.  **Buka di Browser**
-    Buka peramban Anda dan kunjungi [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000). Anda akan melihat halaman utama Jericobots.
+2.  **Open in Browser**
+    Open your browser and navigate to [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000). You should see the Jericobots homepage.
 
-Setiap perubahan yang Anda buat pada kode (misalnya di `src/app/page.tsx`) akan secara otomatis terlihat di peramban berkat fitur *Hot Reloading* dari Next.js.
+Any changes you make to the code (e.g., in `src/app/page.tsx`) will automatically be reflected in the browser, thanks to Next.js's Hot Reloading feature.
 
 -----
 
-## 📂 Struktur Kode
+## 📂 Code Structure
 
-Struktur folder proyek ini dirancang agar mudah dikelola dan diskalakan. Berikut adalah penjelasan direktori dan file utamanya:
+The project's folder structure is designed to be easy to manage and scale. Here is an explanation of the main directories and files:
 
 ```
 jericobots/
-├── .next/              # Direktori build (dihasilkan otomatis)
-├── public/             # Aset statis seperti gambar & font
+├── .next/              # Build directory (auto-generated)
+├── public/             # Static assets like images & fonts
 ├── src/
 │   ├── app/
-│   │   ├── globals.css   # File CSS global
-│   │   ├── layout.tsx    # Layout utama aplikasi (termasuk tag <html> dan <body>)
-│   │   └── page.tsx      # Halaman utama aplikasi (/)
+│   │   ├── globals.css   # Global CSS file
+│   │   ├── layout.tsx    # Main application layout (includes <html> and <body> tags)
+│   │   └── page.tsx      # Main application page (/)
 │   │
 │   ├── components/
-│   │   ├── sections/     # Komponen besar untuk setiap bagian halaman (Hero, Footer, dll.)
-│   │   └── ui/           # Komponen UI kecil yang dapat digunakan kembali (Button, Card, dll.)
+│   │   ├── sections/     # Large components for each page section (Hero, Footer, etc.)
+│   │   └── ui/           # Small, reusable UI components (Button, Card, etc.)
 │   │
 │   └── libs/
-│       └── utils.ts      # Fungsi utilitas (contoh: fungsi 'cn' untuk menggabungkan class Tailwind)
+│       └── utils.ts      # Utility functions (e.g., the 'cn' function for merging Tailwind classes)
 │
-├── package.json        # Daftar dependensi dan skrip proyek
-├── tailwind.config.ts  # Konfigurasi Tailwind CSS
-├── tsconfig.json       # Konfigurasi TypeScript & path aliases
-└── netlify.toml        # Konfigurasi untuk deployment di Netlify (opsional)
+├── package.json        # List of project dependencies and scripts
+├── tailwind.config.ts  # Tailwind CSS configuration
+├── tsconfig.json       # TypeScript configuration & path aliases
+└── netlify.toml        # Configuration for deploying on Netlify (optional)
 ```
 
-### Penjelasan Fungsi Utama
+### Key File Functions
 
-  * **`src/app/page.tsx`**: Ini adalah pintu masuk utama halaman Anda. File ini mengimpor dan menyusun semua komponen dari `src/components/sections/` untuk membangun tampilan lengkap.
-  * **`src/app/layout.tsx`**: File ini membungkus seluruh aplikasi. Di sinilah Anda mendefinisikan metadata global (seperti judul tab peramban), memuat font, dan mengatur struktur HTML dasar.
-  * **Komponen di `src/components/sections/`**: Setiap file di sini (misalnya, `HeroSection.tsx`, `Footer.tsx`) mewakili satu bagian besar dari halaman. Memecah halaman menjadi komponen seperti ini membuatnya lebih mudah untuk dikelola.
-  * **Komponen di `src/components/ui/`**: Berisi komponen-komponen UI dari `shadcn/ui` yang telah Anda kustomisasi. Komponen ini (seperti `Button` dan `Card`) digunakan di seluruh aplikasi untuk menjaga konsistensi visual.
-  * **`libs/utils.ts`**: Berisi fungsi `cn` yang sangat berguna untuk menggabungkan *class name* secara kondisional di Tailwind CSS.
+  * **`src/app/page.tsx`**: This is the main entry point for your homepage. It imports and arranges all the components from `src/components/sections/` to build the complete view.
+  * **`src/app/layout.tsx`**: This file wraps the entire application. It's where you define global metadata (like the browser tab title), load fonts, and set up the basic HTML structure.
+  * **Components in `src/components/sections/`**: Each file here (e.g., `HeroSection.tsx`, `Footer.tsx`) represents a major section of the page. Breaking the page down like this makes it easier to manage.
+  * **Components in `src/components/ui/`**: Contains the UI components from `shadcn/ui` that you have customized. These components (like `Button` and `Card`) are used throughout the application to maintain visual consistency.
+  * **`libs/utils.ts`**: Contains the `cn` utility function, which is very helpful for conditionally combining class names in Tailwind CSS.
 
 -----
 
-## 🤔 Troubleshooting Umum
+## 🤔 Common Troubleshooting
 
-Berikut adalah beberapa masalah umum yang mungkin Anda hadapi dan cara mengatasinya:
+Here are some common issues you might encounter and how to solve them:
 
 1.  **Error: "Module not found: Can't resolve '@/libs/utils'"**
 
-      * **Penyebab**: *Path alias* (`@/`) tidak terkonfigurasi dengan benar atau nama folder salah.
-      * **Solusi**: Pastikan Anda memiliki direktori `src/libs` (bukan `src/lib`) dan `tsconfig.json` Anda berisi konfigurasi `paths` yang benar.
+      * **Cause**: The path alias (`@/`) is not configured correctly, or the folder name is wrong.
+      * **Solution**: Ensure you have a `src/libs` directory (not `src/lib`) and that your `tsconfig.json` contains the correct `paths` configuration.
 
-2.  **Judul Tab Browser Tidak Berubah**
+2.  **Browser Tab Title Doesn't Change**
 
-      * **Penyebab**: Server *development* Next.js menggunakan *cache*.
-      * **Solusi**: Hentikan server (`Ctrl + C`) dan jalankan kembali (`bun run dev`). Pastikan juga metadata hanya didefinisikan di `src/app/layout.tsx`.
+      * **Cause**: The Next.js development server is using a cache.
+      * **Solution**: Stop the server (`Ctrl + C`) and restart it (`bun run dev`). Also, make sure that metadata is only defined in `src/app/layout.tsx`.
 
-3.  **Gaya Tailwind CSS Tidak Tampil**
+3.  **Tailwind CSS Styles Are Not Applying**
 
-      * **Penyebab**: Konfigurasi di `tailwind.config.ts` mungkin salah.
-      * **Solusi**: Pastikan properti `content` di `tailwind.config.ts` sudah mencakup semua path file yang menggunakan class Tailwind (`./src/**/*.{js,ts,jsx,tsx,mdx}`).
-
------
-
-## 🗺️ Roadmap Pengembangan
-
-Proyek ini memiliki banyak potensi untuk dikembangkan lebih lanjut. Berikut adalah beberapa ide untuk masa depan:
-
-  * [ ] **Halaman Detail Produk**: Membuat halaman dinamis untuk setiap produk yang ada di katalog.
-  * [ ] **Sistem Blog Penuh**: Mengintegrasikan CMS (seperti Sanity atau Contentful) atau menggunakan file Markdown untuk mengelola postingan blog.
-  * [ ] **Formulir Kontak Fungsional**: Menghubungkan formulir "Jadwalkan Demo" dan "Kontak" ke layanan email atau *backend*.
-  * [ ] **Mode Gelap (Dark Mode)**: Mengimplementasikan *toggle* untuk beralih antara tema terang dan gelap.
-  * [ ] **Animasi & Interaktivitas**: Menambahkan lebih banyak animasi (misalnya dengan Framer Motion) untuk meningkatkan pengalaman pengguna.
+      * **Cause**: The configuration in `tailwind.config.ts` might be incorrect.
+      * **Solution**: Make sure the `content` property in `tailwind.config.ts` includes all file paths that use Tailwind classes (`./src/**/*.{js,ts,jsx,tsx,mdx}`).
 
 -----
 
-Terima kasih telah menggunakan proyek ini. Jangan ragu untuk berkontribusi\! ✨
+## 🗺️ Development Roadmap
+
+This project has a lot of potential for future development. Here are some ideas:
+
+  * [ ] **Product Detail Pages**: Create dynamic pages for each product in the catalog.
+  * [ ] **Full Blog System**: Integrate a CMS (like Sanity or Contentful) or use Markdown files to manage blog posts.
+  * [ ] **Functional Contact Forms**: Connect the "Schedule a Demo" and "Contact" forms to an email service or backend.
+  * [ ] **Dark Mode**: Implement a toggle to switch between light and dark themes.
+  * [ ] **Animations & Interactivity**: Add more animations (e.g., with Framer Motion) to enhance the user experience.
+
