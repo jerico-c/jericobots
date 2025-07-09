@@ -110,27 +110,6 @@ jericobots/
 
 -----
 
-## 🤔 Common Troubleshooting
-
-Here are some common issues you might encounter and how to solve them:
-
-1.  **Error: "Module not found: Can't resolve '@/libs/utils'"**
-
-      * **Cause**: The path alias (`@/`) is not configured correctly, or the folder name is wrong.
-      * **Solution**: Ensure you have a `src/libs` directory (not `src/lib`) and that your `tsconfig.json` contains the correct `paths` configuration.
-
-2.  **Browser Tab Title Doesn't Change**
-
-      * **Cause**: The Next.js development server is using a cache.
-      * **Solution**: Stop the server (`Ctrl + C`) and restart it (`bun run dev`). Also, make sure that metadata is only defined in `src/app/layout.tsx`.
-
-3.  **Tailwind CSS Styles Are Not Applying**
-
-      * **Cause**: The configuration in `tailwind.config.ts` might be incorrect.
-      * **Solution**: Make sure the `content` property in `tailwind.config.ts` includes all file paths that use Tailwind classes (`./src/**/*.{js,ts,jsx,tsx,mdx}`).
-
------
-
 ## 🗺️ Development Roadmap
 
 This project has a lot of potential for future development. Here are some ideas:
