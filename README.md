@@ -41,7 +41,7 @@ Before you begin, make sure you have the following software installed on your co
     Open your terminal and run the following command:
 
     ```bash
-    git clone https://<YOUR_REPOSITORY_URL>.git
+    git clone https://jerico-c/jericobots.git
     cd jericobots
     ```
 
