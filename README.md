@@ -1,122 +1,136 @@
 # Jericobots - Website & Catalog 🤖
 
-Welcome to the Jericobots repository\! This is a website project built with Next.js and Tailwind CSS, serving as a product catalog and homepage for a fictional tech company, Jericobots, which focuses on AI and Robotics.
+Selamat datang di repositori Jericobots! Ini adalah proyek situs web yang dibangun dengan Next.js dan Tailwind CSS, berfungsi sebagai katalog produk dan halaman utama untuk perusahaan teknologi fiksi, Jericobots, yang berfokus pada AI dan Robotika.
 
-This documentation is designed to help developers, especially beginners, understand how the application works, its code structure, and how to run it locally.
+Dokumentasi ini dirancang untuk membantu pengembang, terutama pemula, memahami cara kerja aplikasi, struktur kodenya, dan cara menjalankannya secara lokal.
 
-## 📋 Table of Contents
+## 📋 Daftar Isi
 
-  - [✨ Application Overview](https://www.google.com/search?q=%23-application-overview)
-  - [🛠️ Prerequisites & Installation](https://www.google.com/search?q=%23%EF%B8%8F-prerequisites--installation)
-  - [🚀 How to Use](https://www.google.com/search?q=%23-how-to-use)
-  - [📂 Code Structure](https://www.google.com/search?q=%23-code-structure)
-  - [🤔 Common Troubleshooting](https://www.google.com/search?q=%23-common-troubleshooting)
-  - [🗺️ Development Roadmap](https://www.google.com/search?q=%23%EF%B8%8F-development-roadmap)
-
------
-
-## ✨ Application Overview
-
-**Jericobots** is an interactive website showcasing a technology company's profile. Its goals are to:
-
-1.  **Showcase Products**: Display a catalog of featured products in AI, Robotics, and Automation.
-2.  **Build Brand Image**: Enhance the company's image as a pioneer in industrial technology.
-3.  **Attract Clients & Talent**: Through case studies, a blog, and a careers page.
-
-The application is fully responsive and designed with a modern aesthetic suitable for the B2B tech industry.
+  - [✨ Gambaran Umum Aplikasi](#gambaran-umum-aplikasi)
+  - [🛠️ Prasyarat & Instalasi](#prasyarat--instalasi)
+  - [🚀 Cara Menggunakan](#cara-menggunakan)
+  - [📂 Struktur Kode](#struktur-kode)
+  - [🤔 Pemecahan Masalah Umum](#pemecahan-masalah-umum)
+  - [🗺️ Peta Jalan Pengembangan](#peta-jalan-pengembangan)
 
 -----
 
-## 🛠️ Prerequisites & Installation
+<a id="gambaran-umum-aplikasi"></a>
+## ✨ Gambaran Umum Aplikasi
 
-Before you begin, make sure you have the following software installed on your computer:
+**Jericobots** adalah situs web interaktif yang menampilkan profil perusahaan teknologi. Tujuannya adalah untuk:
 
-  * [Node.js](https://nodejs.org/) (v18.0 or later)
-  * [Bun](https://bun.sh/) (Used as the package manager & runtime)
+1.  **Menampilkan Produk**: Menampilkan katalog produk unggulan dalam AI, Robotika, dan Otomasi.
+2.  **Membangun Citra Merek**: Meningkatkan citra perusahaan sebagai pelopor dalam teknologi industri.
+3.  **Menarik Klien & Talenta**: Melalui studi kasus, blog, dan halaman karir.
+
+Aplikasi ini sepenuhnya responsif dan dirancang dengan estetika modern yang cocok untuk industri teknologi B2B. Semua tombol dan tautan navigasi di halaman ini sekarang berfungsi untuk mengarahkan pengguna ke bagian yang relevan di dalam halaman (dengan *smooth scroll*) atau ke tautan eksternal yang sesuai.
+
+-----
+
+<a id="prasyarat--instalasi"></a>
+## 🛠️ Prasyarat & Instalasi
+
+Sebelum memulai, pastikan Anda memiliki perangkat lunak berikut yang terinstal di komputer Anda:
+
+  * [Node.js](https://nodejs.org/) (v18.0 atau lebih baru)
+  * [Bun](https://bun.sh/) (Digunakan sebagai manajer paket & runtime)
   * [Git](https://git-scm.com/)
 
-### Installation Steps
+### Langkah-Langkah Instalasi
 
-1.  **Clone the Repository**
-    Open your terminal and run the following command:
+1.  **Kloning Repositori**
+    Buka terminal Anda dan jalankan perintah berikut:
 
     ```bash
     git clone https://jerico-c/jericobots.git
     cd jericobots
     ```
 
-2.  **Install Dependencies**
-    This project uses `bun` as its package manager. Run the command:
+2.  **Instal Dependensi**
+    Proyek ini menggunakan `bun` sebagai manajer paketnya. Jalankan perintah:
 
     ```bash
     bun install
     ```
 
-    This command will read the `package.json` file and install all the necessary packages.
+    Perintah ini akan membaca file `package.json` dan menginstal semua paket yang diperlukan.
 
 -----
 
-## 🚀 How to Use
+<a id="cara-menggunakan"></a>
+## 🚀 Cara Menggunakan
 
-Once the installation is complete, you can run the local development server.
+Setelah instalasi selesai, Anda dapat menjalankan server pengembangan lokal.
 
-1.  **Run the Development Server**
+1.  **Jalankan Server Pengembangan**
 
     ```bash
     bun run dev
     ```
 
-2.  **Open in Browser**
-    Open your browser and navigate to [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000). You should see the Jericobots homepage.
+2.  **Buka di Peramban**
+    Buka peramban Anda dan navigasikan ke [http://localhost:3000](http://localhost:3000). Anda akan melihat halaman utama Jericobots.
 
-Any changes you make to the code (e.g., in `src/app/page.tsx`) will automatically be reflected in the browser, thanks to Next.js's Hot Reloading feature.
+Setiap perubahan yang Anda buat pada kode (misalnya, di `src/app/page.tsx`) akan secara otomatis tercermin di peramban, berkat fitur *Hot Reloading* Next.js. Tombol dan tautan navigasi di halaman utama telah diimplementasikan agar berfungsi, mengarahkan pengguna ke bagian halaman yang relevan atau ke tautan eksternal (misalnya, email atau media sosial) menggunakan `asChild` prop pada komponen `Button` untuk mempertahankan gaya dan semantik yang tepat.
 
 -----
 
-## 📂 Code Structure
+<a id="struktur-kode"></a>
+## 📂 Struktur Kode
 
-The project's folder structure is designed to be easy to manage and scale. Here is an explanation of the main directories and files:
+Struktur folder proyek dirancang agar mudah dikelola dan diskalakan. Berikut adalah penjelasan tentang direktori dan file utama:
 
-```
+````
+
 jericobots/
-├── .next/              # Build directory (auto-generated)
-├── public/             # Static assets like images & fonts
+├── .next/              \# Direktori build (dibuat secara otomatis)
+├── public/             \# Aset statis seperti gambar & font
 ├── src/
 │   ├── app/
-│   │   ├── globals.css   # Global CSS file
-│   │   ├── layout.tsx    # Main application layout (includes <html> and <body> tags)
-│   │   └── page.tsx      # Main application page (/)
+│   │   ├── globals.css   \# File CSS global
+│   │   ├── layout.tsx    \# Tata letak aplikasi utama (termasuk tag \<html\> dan \<body\>)
+│   │   └── page.tsx      \# Halaman aplikasi utama (/)
 │   │
 │   ├── components/
-│   │   ├── sections/     # Large components for each page section (Hero, Footer, etc.)
-│   │   └── ui/           # Small, reusable UI components (Button, Card, etc.)
+│   │   ├── sections/     \# Komponen besar untuk setiap bagian halaman (Hero, Footer, dll.)
+│   │   └── ui/           \# Komponen UI kecil yang dapat digunakan kembali (Button, Card, dll.)
 │   │
 │   └── libs/
-│       └── utils.ts      # Utility functions (e.g., the 'cn' function for merging Tailwind classes)
+│       └── utils.ts      \# Fungsi utilitas (misalnya, fungsi 'cn' untuk menggabungkan kelas Tailwind)
 │
-├── package.json        # List of project dependencies and scripts
-├── tailwind.config.ts  # Tailwind CSS configuration
-├── tsconfig.json       # TypeScript configuration & path aliases
-└── netlify.toml        # Configuration for deploying on Netlify (optional)
+├── package.json        \# Daftar dependensi dan skrip proyek
+├── tailwind.config.ts  \# Konfigurasi Tailwind CSS
+├── tsconfig.json       \# Konfigurasi TypeScript & alias path
+└── netlify.toml        \# Konfigurasi untuk deployment di Netlify (opsional)
+
 ```
 
-### Key File Functions
+### Fungsi File Utama
 
-  * **`src/app/page.tsx`**: This is the main entry point for your homepage. It imports and arranges all the components from `src/components/sections/` to build the complete view.
-  * **`src/app/layout.tsx`**: This file wraps the entire application. It's where you define global metadata (like the browser tab title), load fonts, and set up the basic HTML structure.
-  * **Components in `src/components/sections/`**: Each file here (e.g., `HeroSection.tsx`, `Footer.tsx`) represents a major section of the page. Breaking the page down like this makes it easier to manage.
-  * **Components in `src/components/ui/`**: Contains the UI components from `shadcn/ui` that you have customized. These components (like `Button` and `Card`) are used throughout the application to maintain visual consistency.
-  * **`libs/utils.ts`**: Contains the `cn` utility function, which is very helpful for conditionally combining class names in Tailwind CSS.
+  * **`src/app/page.tsx`**: Ini adalah titik masuk utama untuk halaman utama Anda. File ini mengimpor dan mengatur semua komponen dari `src/components/sections/` untuk membangun tampilan lengkap. Sekarang, file ini juga mengimplementasikan fungsionalitas navigasi internal halaman dan tautan eksternal untuk tombol.
+  * **`src/app/layout.tsx`**: File ini membungkus seluruh aplikasi. Di sinilah Anda mendefinisikan metadata global (seperti judul tab peramban), memuat font, dan mengatur struktur HTML dasar.
+  * **Komponen di `src/components/sections/`**: Setiap file di sini (misalnya, `HeroSection.tsx`, `Footer.tsx`) mewakili bagian utama halaman. Memecah halaman seperti ini membuatnya lebih mudah dikelola.
+  * **Komponen di `src/components/ui/`**: Berisi komponen UI dari `shadcn/ui` yang telah Anda sesuaikan. Komponen-komponen ini (seperti `Button` dan `Card`) digunakan di seluruh aplikasi untuk menjaga konsistensi visual. Komponen `Button` sekarang mendukung prop `asChild` untuk memungkinkan penggunaannya sebagai tautan (`<a>`) tanpa kehilangan styling tombol.
+  * **`libs/utils.ts`**: Berisi fungsi utilitas `cn`, yang sangat membantu untuk menggabungkan nama kelas secara kondisional di Tailwind CSS.
 
 -----
 
-## 🗺️ Development Roadmap
+<a id="pemecahan-masalah-umum"></a>
+## 🤔 Pemecahan Masalah Umum
 
-This project has a lot of potential for future development. Here are some ideas:
+Bagian ini akan ditambahkan jika ada masalah umum yang sering terjadi.
 
-  * [ ] **Product Detail Pages**: Create dynamic pages for each product in the catalog.
-  * [ ] **Full Blog System**: Integrate a CMS (like Sanity or Contentful) or use Markdown files to manage blog posts.
-  * [ ] **Functional Contact Forms**: Connect the "Schedule a Demo" and "Contact" forms to an email service or backend.
-  * [ ] **Dark Mode**: Implement a toggle to switch between light and dark themes.
-  * [ ] **Animations & Interactivity**: Add more animations (e.g., with Framer Motion) to enhance the user experience.
+-----
 
+<a id="peta-jalan-pengembangan"></a>
+## 🗺️ Peta Jalan Pengembangan
+
+Proyek ini memiliki banyak potensi untuk pengembangan di masa mendatang. Berikut adalah beberapa ide:
+
+  * [ ] **Halaman Detail Produk**: Buat halaman dinamis untuk setiap produk dalam katalog.
+  * [ ] **Sistem Blog Lengkap**: Integrasikan CMS (seperti Sanity atau Contentful) atau gunakan file Markdown untuk mengelola postingan blog.
+  * [ ] **Formulir Kontak Fungsional**: Hubungkan formulir "Jadwalkan Demo" dan "Kontak" ke layanan email atau backend. (Saat ini menggunakan tautan `mailto:`)
+  * [ ] **Mode Gelap**: Implementasikan sakelar untuk beralih antara tema terang dan gelap.
+  * [ ] **Animasi & Interaktivitas**: Tambahkan lebih banyak animasi (misalnya, dengan Framer Motion) untuk meningkatkan pengalaman pengguna.
+```
