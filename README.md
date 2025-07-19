@@ -9,7 +9,6 @@ Dokumentasi ini dirancang untuk membantu pengembang, terutama pemula, memahami c
   - [✨ Gambaran Umum Aplikasi](#gambaran-umum-aplikasi)
   - [🛠️ Prasyarat & Instalasi](#prasyarat--instalasi)
   - [🚀 Cara Menggunakan](#cara-menggunakan)
-  - [📂 Struktur Kode](#struktur-kode)
   - [🤔 Pemecahan Masalah Umum](#pemecahan-masalah-umum)
   - [🗺️ Peta Jalan Pengembangan](#peta-jalan-pengembangan)
 
