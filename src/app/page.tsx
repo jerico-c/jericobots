@@ -5,7 +5,7 @@ import { Menu, ChevronDown, ArrowRight, Bot, Cpu, Cog, Shield, Users, Star } fro
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" id="home">
       {/* Navigation */}
       <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 backdrop-blur-sm bg-white/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,25 +17,31 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hidden md:block">
+            <div className="hidden md:block" id="main-navigation">
               <div className="ml-10 flex items-baseline space-x-8">
-                <a href="#" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Beranda</a>
+                {/* Navigation links updated to scroll to sections */}
+                <a href="#hero" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Beranda</a>
                 <div className="relative group">
                   <button className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium flex items-center">
                     Produk <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
                 </div>
-                <a href="#" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Studi Kasus</a>
-                <a href="#" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Tentang</a>
-                <a href="#" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Blog</a>
-                <a href="#" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Join Us</a>
-                <a href="#" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Kontak</a>
+                <a href="#case-studies" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Studi Kasus</a>
+                <a href="#about" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Tentang</a>
+                <a href="#blog" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Blog</a>
+                <a href="#join-us" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Join Us</a>
+                <a href="#contact" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Kontak</a>
               </div>
             </div>
 
             <div className="hidden md:flex items-center space-x-4">
-              <Button variant="outline" size="sm">Jadwalkan Demo</Button>
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-700">Lihat Produk</Button>
+              {/* Buttons acting as links, using asChild prop */}
+              <Button variant="outline" size="sm" asChild>
+                <a href="#contact">Jadwalkan Demo</a>
+              </Button>
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700" asChild>
+                <a href="#products">Lihat Produk</a>
+              </Button>
             </div>
 
             <div className="md:hidden">
@@ -48,7 +54,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white overflow-hidden">
+      <section id="hero" className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -68,12 +74,15 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold">
-                  Lihat Produk
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                {/* Buttons acting as links, using asChild prop */}
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold" asChild>
+                  <a href="#products">
+                    Lihat Produk
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                  Jadwalkan Demo
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
+                  <a href="#contact">Jadwalkan Demo</a>
                 </Button>
               </div>
 
@@ -124,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* Product Showcase Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="products" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -165,9 +174,11 @@ export default function Home() {
                     Enterprise Security
                   </div>
                 </div>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                  Lihat Detail
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
+                  <a href="#"> {/* Placeholder for product detail page */}
+                    Lihat Detail
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -200,9 +211,11 @@ export default function Home() {
                     Safety Certified
                   </div>
                 </div>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                  Lihat Detail
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
+                  <a href="#"> {/* Placeholder for product detail page */}
+                    Lihat Detail
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -235,25 +248,29 @@ export default function Home() {
                     Cloud & On-premise
                   </div>
                 </div>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                  Lihat Detail
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <Button className="w-full bg-blue-600 hover:bg-blue-700" asChild>
+                  <a href="#"> {/* Placeholder for product detail page */}
+                    Lihat Detail
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
                 </Button>
               </CardContent>
             </Card>
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-              Lihat Semua Produk
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50" asChild>
+              <a href="#products">
+                Lihat Semua Produk
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>
       </section>
 
       {/* Client Testimonials */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section id="testimonials" className="py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -345,7 +362,7 @@ export default function Home() {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-20 bg-white">
+      <section id="case-studies" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -383,9 +400,11 @@ export default function Home() {
                       <div className="text-gray-500">Defect Rate</div>
                     </div>
                   </div>
-                  <Button variant="outline" className="w-full group-hover:bg-blue-50 group-hover:border-blue-600">
-                    Baca Selengkapnya
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button variant="outline" className="w-full group-hover:bg-blue-50 group-hover:border-blue-600" asChild>
+                    <a href="#"> {/* Placeholder for case study detail page */}
+                      Baca Selengkapnya
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
                   </Button>
                 </div>
               </CardContent>
@@ -416,9 +435,11 @@ export default function Home() {
                       <div className="text-gray-500">Kecepatan</div>
                     </div>
                   </div>
-                  <Button variant="outline" className="w-full group-hover:bg-green-50 group-hover:border-green-600">
-                    Baca Selengkapnya
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button variant="outline" className="w-full group-hover:bg-green-50 group-hover:border-green-600" asChild>
+                    <a href="#"> {/* Placeholder for case study detail page */}
+                      Baca Selengkapnya
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
                   </Button>
                 </div>
               </CardContent>
@@ -449,9 +470,11 @@ export default function Home() {
                       <div className="text-gray-500">Efisiensi</div>
                     </div>
                   </div>
-                  <Button variant="outline" className="w-full group-hover:bg-purple-50 group-hover:border-purple-600">
-                    Baca Selengkapnya
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button variant="outline" className="w-full group-hover:bg-purple-50 group-hover:border-purple-600" asChild>
+                    <a href="#"> {/* Placeholder for case study detail page */}
+                      Baca Selengkapnya
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
                   </Button>
                 </div>
               </CardContent>
@@ -459,16 +482,18 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-              Lihat Semua Studi Kasus
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
+              <a href="#case-studies">
+                Lihat Semua Studi Kasus
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="about" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -524,9 +549,11 @@ export default function Home() {
                 </div>
               </div>
 
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                Pelajari Lebih Lanjut
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
+                <a href="#about">
+                  Pelajari Lebih Lanjut
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
             </div>
 
@@ -582,7 +609,7 @@ export default function Home() {
       </section>
 
       {/* Blog / News Section */}
-      <section className="py-20 bg-white">
+      <section id="blog" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -622,9 +649,11 @@ export default function Home() {
                       </div>
                       <span className="text-sm text-gray-500">Dr. Andi Robotika</span>
                     </div>
-                    <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-700">
-                      Baca Artikel
-                      <ArrowRight className="ml-1 h-4 w-4" />
+                    <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-700" asChild>
+                      <a href="#"> {/* Placeholder for blog article page */}
+                        Baca Artikel
+                        <ArrowRight className="ml-1 h-4 w-4" />
+                      </a>
                     </Button>
                   </div>
                 </div>
@@ -658,9 +687,11 @@ export default function Home() {
                       </div>
                       <span className="text-sm text-gray-500">Sarah Teknologi</span>
                     </div>
-                    <Button variant="ghost" size="sm" className="text-green-600 hover:text-green-700">
-                      Baca Artikel
-                      <ArrowRight className="ml-1 h-4 w-4" />
+                    <Button variant="ghost" size="sm" className="text-green-600 hover:text-green-700" asChild>
+                      <a href="#"> {/* Placeholder for blog article page */}
+                        Baca Artikel
+                        <ArrowRight className="ml-1 h-4 w-4" />
+                      </a>
                     </Button>
                   </div>
                 </div>
@@ -694,9 +725,11 @@ export default function Home() {
                       </div>
                       <span className="text-sm text-gray-500">Budi Otomasi</span>
                     </div>
-                    <Button variant="ghost" size="sm" className="text-orange-600 hover:text-orange-700">
-                      Baca Artikel
-                      <ArrowRight className="ml-1 h-4 w-4" />
+                    <Button variant="ghost" size="sm" className="text-orange-600 hover:text-orange-700" asChild>
+                      <a href="#"> {/* Placeholder for blog article page */}
+                        Baca Artikel
+                        <ArrowRight className="ml-1 h-4 w-4" />
+                      </a>
                     </Button>
                   </div>
                 </div>
@@ -705,16 +738,18 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-              Lihat Semua Artikel
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50" asChild>
+              <a href="#blog">
+                Lihat Semua Artikel
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
           </div>
         </div>
       </section>
 
       {/* Career / Join Us Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white relative overflow-hidden">
+      <section id="join-us" className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -769,12 +804,14 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold">
-                  Lihat Lowongan Kerja
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold" asChild>
+                  <a href="#join-us">
+                    Lihat Lowongan Kerja
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                  Kirim CV Inisiatif
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
+                  <a href="mailto:hr@jericobots.com">Kirim CV Inisiatif</a>
                 </Button>
               </div>
             </div>
@@ -795,8 +832,8 @@ export default function Home() {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-blue-200">Full-time • Jakarta</span>
-                    <Button size="sm" variant="ghost" className="text-white hover:bg-white/20">
-                      Apply
+                    <Button size="sm" variant="ghost" className="text-white hover:bg-white/20" asChild>
+                      <a href="#">Apply</a>
                     </Button>
                   </div>
                 </CardContent>
@@ -816,8 +853,8 @@ export default function Home() {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-blue-200">Full-time • Jakarta</span>
-                    <Button size="sm" variant="ghost" className="text-white hover:bg-white/20">
-                      Apply
+                    <Button size="sm" variant="ghost" className="text-white hover:bg-white/20" asChild>
+                      <a href="#">Apply</a>
                     </Button>
                   </div>
                 </CardContent>
@@ -837,8 +874,8 @@ export default function Home() {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-blue-200">Full-time • Remote</span>
-                    <Button size="sm" variant="ghost" className="text-white hover:bg-white/20">
-                      Apply
+                    <Button size="sm" variant="ghost" className="text-white hover:bg-white/20" asChild>
+                      <a href="#">Apply</a>
                     </Button>
                   </div>
                 </CardContent>
@@ -858,8 +895,8 @@ export default function Home() {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-blue-200">Full-time • Jakarta</span>
-                    <Button size="sm" variant="ghost" className="text-white hover:bg-white/20">
-                      Apply
+                    <Button size="sm" variant="ghost" className="text-white hover:bg-white/20" asChild>
+                      <a href="#">Apply</a>
                     </Button>
                   </div>
                 </CardContent>
@@ -870,7 +907,7 @@ export default function Home() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="contact" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-16">
             <div className="text-center space-y-8">
@@ -917,12 +954,14 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 font-semibold">
-                  Jadwalkan Konsultasi
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 font-semibold" asChild>
+                  <a href="mailto:info@jericobots.com">
+                    Jadwalkan Konsultasi
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
                 </Button>
-                <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
-                  Hubungi Sales
+                <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50" asChild>
+                  <a href="mailto:sales@jericobots.com">Hubungi Sales</a>
                 </Button>
               </div>
 
@@ -946,7 +985,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white">
+      <footer id="footer" className="bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
@@ -959,14 +998,14 @@ export default function Home() {
                 Menghadirkan solusi cerdas untuk meningkatkan efisiensi dan produktivitas bisnis Anda.
               </p>
               <div className="flex space-x-4">
-                <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:text-white">
-                  LinkedIn
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:text-white" asChild>
+                  <a href="https://www.linkedin.com/company/jericobots" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </Button>
-                <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:text-white">
-                  Twitter
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:text-white" asChild>
+                  <a href="https://twitter.com/jericobots" target="_blank" rel="noopener noreferrer">Twitter</a>
                 </Button>
-                <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:text-white">
-                  YouTube
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:text-white" asChild>
+                  <a href="https://www.youtube.com/jericobots" target="_blank" rel="noopener noreferrer">YouTube</a>
                 </Button>
               </div>
             </div>
@@ -974,12 +1013,12 @@ export default function Home() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Navigasi</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Beranda</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Produk</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Studi Kasus</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Tentang Kami</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Karir</a></li>
+                <li><a href="#hero" className="hover:text-white transition-colors">Beranda</a></li>
+                <li><a href="#products" className="hover:text-white transition-colors">Produk</a></li>
+                <li><a href="#case-studies" className="hover:text-white transition-colors">Studi Kasus</a></li>
+                <li><a href="#about" className="hover:text-white transition-colors">Tentang Kami</a></li>
+                <li><a href="#blog" className="hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#join-us" className="hover:text-white transition-colors">Karir</a></li>
               </ul>
             </div>
 
@@ -990,8 +1029,8 @@ export default function Home() {
                 <li>+62 21 1234 5678</li>
                 <li>info@jericobots.com</li>
                 <li>
-                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700 mt-4">
-                    Hubungi Kami
+                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700 mt-4" asChild>
+                    <a href="mailto:info@jericobots.com">Hubungi Kami</a>
                   </Button>
                 </li>
               </ul>
@@ -999,7 +1038,7 @@ export default function Home() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Jericobots. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p>&copy; 2024 Jericobots. All rights reserved. | <a href="#" className="hover:text-white transition-colors">Privacy Policy</a> | <a href="#" className="hover:text-white transition-colors">Terms of Service</a></p>
           </div>
         </div>
       </footer>
