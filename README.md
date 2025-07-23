@@ -18,7 +18,7 @@ Dokumentasi ini dirancang untuk membantu pengembang, terutama pemula, memahami c
 ## ✨ Gambaran Umum Aplikasi
 ![homepage](screenshot/homepage.png)
 
-![homepage](screenshot/catalog.png)
+![catalog](screenshot/catalog.png)
 **Jericobots** adalah situs web interaktif yang menampilkan profil perusahaan teknologi. Tujuannya adalah untuk:
 
 1.  **Menampilkan Produk**: Menampilkan katalog produk unggulan dalam AI, Robotika, dan Otomasi.
