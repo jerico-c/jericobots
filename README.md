@@ -22,6 +22,8 @@ Dokumentasi ini dirancang untuk membantu pengembang, terutama pemula, memahami c
 
 ![hero](screenshot/hero.png)
 
+![hero](screenshot/hero.png)
+
 
 **Jericobots** adalah situs web interaktif yang menampilkan profil perusahaan teknologi. Tujuannya adalah untuk:
 
