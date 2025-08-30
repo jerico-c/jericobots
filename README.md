@@ -32,6 +32,8 @@ Dokumentasi ini dirancang untuk membantu pengembang, terutama pemula, memahami c
 
 ![join now](screenshot/join.png)
 
+![join now](screenshot/join.png)
+
 
 **Jericobots** adalah situs web interaktif yang menampilkan profil perusahaan teknologi. Tujuannya adalah untuk:
 
